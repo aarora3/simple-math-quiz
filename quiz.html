@@ -1,0 +1,552 @@
+<html>
+   <head>
+   
+   <p id="demo"></p>
+      
+      <script type="text/javascript">
+         <!--
+         	var correct=0;
+            var wrong=0;
+            var total=0;
+            
+            
+            
+            function intAdd()
+			{
+            
+            	var x=parseInt(Math.random()*10);
+                var y=parseInt(Math.random()*10);
+                var sum=x+y;
+                var retVal = window.prompt(x + "+" + y );
+
+               
+               
+               if(retVal== null)
+               {}
+               else
+   				{
+					if(sum==retVal)
+					{
+						correct++;
+						total++;
+               
+						alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+              
+            
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n' + "The correct answer is "+ sum + '\n' +"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+               
+                
+                 
+                }
+            } 
+            function intSub(){
+            
+            	var x=parseInt(Math.random()*10);
+                var y=parseInt(Math.random()*10);
+                var sub=x-y;
+				var retVal = window.prompt(x + "-" + y);
+            
+               
+               if(retVal== null)
+               {}
+               else
+   				{
+               
+					if(sub==retVal)
+					{
+						correct++;
+						total++;
+              
+              
+						alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+              
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n'+ "The correct answer is " + sub + '\n'+ "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+               
+                
+                 }
+            }
+                 
+            function floatAdd(){
+            
+            	var x=Math.floor(parseFloat(Math.random()*100.0))/10.0;
+                var y=Math.floor(parseFloat(Math.random()*100.0))/10.0;
+                var sum=Math.round((x+y)*10)/10;
+				var retVal = window.prompt(x.toFixed(1) + "+" + y.toFixed(1));
+               
+               
+                if(retVal== null)
+				{}
+				else
+   				{
+				   
+					if(sum==retVal)
+					{
+						correct++;
+						total++;
+				  
+						alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+				  
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n' + "The correct answer is "+ sum + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+				    }
+				}
+                
+                 
+            }
+			function floatSub(){
+            
+            	var x=Math.floor(parseFloat(Math.random()*100.0))/10.0;
+                var y=Math.floor(parseFloat(Math.random()*100.0))/10.0;
+				
+				
+                var sub=Math.round((x-y)*10)/10;
+				var retVal = window.prompt(x.toFixed(1) + "-" + y.toFixed(1));
+               
+               
+                if(retVal== null)
+				{}
+				else
+   				{
+				   
+					if(sub==retVal)
+					{
+						correct++;
+						total++;
+				  
+						alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+				  
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n' + "The correct answer is "+ sub + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+				    }
+				}
+                
+                 
+            }
+            function complexAdd()
+			{
+            
+            	var r1=parseInt(Math.random()*10);
+                var i1=parseInt(Math.random()*10);
+                
+                var r2=parseInt(Math.random()*10);
+                var i2=parseInt(Math.random()*10);
+                
+                var R = r1+r2;
+                var I = i1+i2;
+
+				var retVal = window.prompt("Add " + r1 + "+" + i1 +"i and " + r2 + "+"+ i2 +"i\n\n" + "Enter in format X + Yi.");
+           
+                if(retVal== null)
+				{}
+				else
+   				{
+					if((retVal.indexOf("+")> -1) && (retVal.indexOf("i") > -1))
+					{
+						var input = retVal.split("+");
+						var inp = input[1].split("i");
+						if((input[0]==R)&&(inp[0]==I))
+						{
+							correct++;
+							total++;
+					  
+							alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					  
+						else
+						{
+							wrong++;
+							total++;
+							alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					}
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+				}
+                
+                 
+            }
+            function complexSub(){
+            
+            	var r1=parseInt(Math.random()*10);
+                var i1=parseInt(Math.random()*10);
+                
+                var r2=parseInt(Math.random()*10);
+                var i2=parseInt(Math.random()*10);
+                
+                var R = r1-r2;
+                var I = i1-i2;
+
+				var retVal = window.prompt("Subtract " + r1 + "+" + i1 +"i and " + r2 + "+"+ i2 +"i\n\n" + "Enter in format X + Yi.");
+                
+                if(retVal== null)
+				{}
+				else
+   				{
+					if((retVal.indexOf("+")> -1) && (retVal.indexOf("i") > -1))
+					{
+						var input = retVal.split("+");
+						var inp = input[1].split("i");
+						
+						if((input[0]==R)&&(inp[0]==I))
+						{
+							correct++;
+							total++;
+					  
+							alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					  
+						else
+						{
+							wrong++;
+							total++;
+							alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					}
+					else
+					{
+						wrong++;
+						total++;
+						alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+					}
+				}
+                
+                 
+            }
+            function extraAdd()
+			{
+            
+            	var r1=parseInt(Math.round(Math.random()));
+                var i1=parseInt(Math.round(Math.random()));
+                
+                var r2=parseInt(Math.round(Math.random()));
+                var i2=parseInt(Math.round(Math.random()));
+                
+                var R = r1+r2;
+                var I = i1+i2;
+
+				var retVal = window.prompt("Add " + r1 + "+" + i1 +"i and " + r2 + "+"+ i2 +"i\n");
+               
+                if(retVal== null)
+				{}
+				else
+   				{
+					if((I==0)&&(R==0))
+					{
+						if(retVal==0)
+						{
+							correct++;
+							total++;
+							alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+						else
+						{
+							wrong++;
+							total++;
+							alert("Wrong Answer" + '\n' + "The correct answer is "+ R + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					}
+					else
+					{
+						if(I==0)
+						{
+							if(retVal==R)
+							{
+								correct++;
+								total++;
+								alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+							}
+							else
+							{
+								wrong++;
+								total++;
+								alert("Wrong Answer" + '\n' + "The correct answer is "+ R + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+							}
+						}
+						else
+						{
+							if(R==0)
+							{
+								var Y=retVal.split("i");
+								if(Y[0]==I)
+								{
+									correct++;
+									total++;
+					  
+									alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+								}
+								else
+								{
+									wrong++;
+									total++;
+									alert("Wrong Answer" + '\n' + "The correct answer is "+ I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+								}
+							}
+							else
+							{
+								if((retVal.indexOf("+")> -1) && (retVal.indexOf("i") > -1))
+								{
+									var input = retVal.split("+");
+									var inp = input[1].split("i");
+									if((input[0]==R)&&(inp[0]==I))
+									{
+										correct++;
+										total++;
+								  
+										alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+									}
+								  
+									else
+									{
+										wrong++;
+										total++;
+										alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+									}
+								}
+								else
+								{
+									wrong++;
+									total++;
+									alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+								}
+							}
+						}
+				    }
+				}
+            }
+			function extraSub()
+			{
+            
+            	var r1=parseInt(Math.round(Math.random()));
+                var i1=parseInt(Math.round(Math.random()));
+                
+                var r2=parseInt(Math.round(Math.random()));
+                var i2=parseInt(Math.round(Math.random()));
+                
+                var R = r1-r2;
+                var I = i1-i2;
+
+				var retVal = window.prompt("Subtract " + r1 + "+" + i1 +"i and " + r2 + "+"+ i2 +"i\n");
+                
+                if(retVal== null)
+				{}
+				else
+   				{
+					if((I==0)&&(R==0))
+					{
+						if(retVal==R)
+						{
+							correct++;
+							total++;
+							alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+						else
+						{
+							wrong++;
+							total++;
+							alert("Wrong Answer" + '\n' + "The correct answer is "+ R + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+						}
+					}
+					else
+					{
+						if(I==0)
+						{
+							if(retVal==R)
+							{
+								correct++;
+								total++;
+								alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+							}
+							else
+							{
+								wrong++;
+								total++;
+								alert("Wrong Answer" + '\n' + "The correct answer is "+ R + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+							}
+						}
+						else
+						{
+							if(R==0)
+							{
+								var Y=retVal.split("i");
+								if(Y[0]==I)
+								{
+									correct++;
+									total++;
+					  
+									alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+								}
+								else
+								{
+									wrong++;
+									total++;
+									alert("Wrong Answer" + '\n' + "The correct answer is "+ I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+								}
+							}
+							else
+							{
+								if((retVal.indexOf("+")> -1)||(retVal.indexOf("-")> -1) && (retVal.indexOf("i") > -1))
+								{
+									if(I<0)
+									{
+										if((retVal.indexOf("-")> -1) && (retVal.indexOf("i") > -1))
+										{
+											var input = retVal.split("-");
+											
+											if(R>=0)
+											{
+												var inp = input[1].split("i");
+												
+												var Y=-inp[0];
+												
+												if((input[0]==R)&&(Y==I))
+												{
+													correct++;
+													total++;
+												
+													alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+												}
+											}
+											else
+											{
+												if(input[2]!=null)
+												{
+													var inp = input[2].split("i");
+													
+													var Y=-inp[0];
+													var X=-input[1];
+													
+													
+													if((X==R)&&(Y==I))
+													{
+														correct++;
+														total++;
+													
+														alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+													}
+												}
+												else
+												{
+													wrong++;
+													total++;
+													alert("Wrong Answer" + '\n' + "The correct answer is "+ R + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+												}
+											}
+										}
+										else
+										{
+											wrong++;
+											total++;
+											alert("Wrong Answer" + '\n' + "The correct answer is "+ R + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+										}	
+									}
+									
+									else
+									{
+										if((retVal.indexOf("+")> -1) && (retVal.indexOf("i") > -1))
+										{
+											var input = retVal.split("+");
+											var inp = input[1].split("i");
+											
+											if((input[0]==R)&&(inp[0]==I))
+												{
+													correct++;
+													total++;
+											  
+													alert("Correct Answer" + '\n' + "Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+												}
+										}
+										else
+										{
+											wrong++;
+											total++;
+											alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+											
+										}
+									}
+								}
+								else
+								{
+									wrong++;
+									total++;
+									if(I<0)
+									{
+										alert("Wrong Answer" + '\n' + "The correct answer is "+ R + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+									}
+									else
+									{
+										alert("Wrong Answer" + '\n' + "The correct answer is "+ R +" + " + I + "i " + '\n'+"Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);
+									}
+								}
+							}
+						}
+					}
+				}    
+            }
+            function checkScore()
+            {
+                alert("Total: " + total + "\n" + "Correct: " + correct +"\n" + "Wrong: " + wrong);	
+            }
+                 
+            function resetScore()
+			{
+				total=0;
+                wrong=0;
+                correct=0;
+                
+            }
+              
+         //-->
+         
+       
+      </script>
+      
+   </head>
+   
+   <body>
+      <p style="text-align: center; font-size: 200%">Simple Math Quiz </p>
+      
+      <form>
+      <div style="text-align: center">
+      <input type="button" value="Integer Addition" style="height:30px;width:160px"  onclick="intAdd();" />&nbsp&nbsp
+      <input type="button" value="Integer Subtraction"style="height:30px;width:160px"  onclick="intSub();" /><br><br>
+      
+      <input type="button" value="Float Addition" style="height:30px;width:160px"onclick="floatAdd();" />&nbsp&nbsp
+      <input type="button" value="Float Subtraction" style="height:30px;width:160px" onclick="floatSub();" /><br><br>
+      
+      <input type="button" value="Complex Addition" style="height:30px;width:160px" onclick="complexAdd();" />&nbsp&nbsp
+      <input type="button" value="Complex Subtraction" style="height:30px;width:160px" onclick="complexSub();" /><br><br>
+
+      <input type="button" value="Extra Addition" style="height:30px;width:160px" onclick="extraAdd();" />&nbsp&nbsp
+      <input type="button" value="Extra Subtraction" style="height:30px;width:160px" onclick="extraSub();" /><br><br>
+      
+      <input type="button" value="Check Score" style="height:30px;width:160px" onclick="checkScore();" />&nbsp&nbsp
+      <input type="button" value="Reset Score" style="height:30px;width:160px" onclick="resetScore();" /><br><br>
+      </div>  
+      </form>
+      
+   </body>
+</html>
